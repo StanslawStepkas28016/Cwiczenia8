@@ -102,3 +102,4 @@
 /Users/stanislawstepka/Desktop/DYSK M/UCZELNIA/4 SEM/APBD/CW 8/Cwiczenia8/LinqTutorials/LinqTests/obj/Debug/net8.0/LinqTests.pdb
 /Users/stanislawstepka/Desktop/DYSK M/UCZELNIA/4 SEM/APBD/CW 8/Cwiczenia8/LinqTutorials/LinqTests/obj/Debug/net8.0/LinqTests.genruntimeconfig.cache
 /Users/stanislawstepka/Desktop/DYSK M/UCZELNIA/4 SEM/APBD/CW 8/Cwiczenia8/LinqTutorials/LinqTests/obj/Debug/net8.0/ref/LinqTests.dll
+/Users/stanislawstepka/Desktop/DYSK M/UCZELNIA/4 SEM/APBD/CW 8/Cwiczenia8/LinqTutorials/LinqTests/obj/Debug/net8.0/LinqTests.sourcelink.json

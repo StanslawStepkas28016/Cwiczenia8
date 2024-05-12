@@ -156,14 +156,18 @@ public static partial class Tasks
     /// </summary>
     public static IEnumerable<object> Task11()
     {
-        return Depts
-            .GroupBy(d => d.Dname)
-            .Where(d => d.Count() > 1)
-            .Select(d => new
-            {
-                Name = d.Key,
-                NumOfEmployees = d.Count()
-            });
+        return Emps
+            .GroupBy(emp => emp.Deptno)
+            .Join(Depts,
+                empJoin => empJoin.Key,
+                deptJoin => deptJoin.Deptno,
+                (emp, dept) => new
+                {
+                    name = dept.Dname,
+                    numOfEmployees = emp.Count()
+                }
+            )
+            .Where(res => res.numOfEmployees > 1);
     }
 
     /// <summary>
@@ -188,7 +192,10 @@ public static partial class Tasks
     /// </summary>
     public static int Task13(int[] arr)
     {
-        return -1;
+        return arr
+            .GroupBy(num => num)
+            .Single(num => num.Count() % 2 != 0)
+            .Key;
     }
 
     /// <summary>
@@ -197,6 +204,33 @@ public static partial class Tasks
     /// </summary>
     public static IEnumerable<Dept> Task14()
     {
-        return null;
+        // Lista obiektów (Deptno, Count).
+        var empCounts = Emps
+            .GroupBy(emp => emp.Deptno)
+            .Select(emp => new
+            {
+                Deptno = emp.Key,
+                Count = emp.Count()
+            });
+        
+        // Lista samych departamentów.
+        var onlyDeptno = empCounts
+            .Select(emp => emp.Deptno);
+
+        // Lista samych numerów Deptno, które mają 5 osób.
+        var fiveCounts = empCounts
+            .Where(ec => ec.Count is 5)
+            .Select(ec => ec.Deptno).ToList();
+        
+        // Zmapowanie numerów na Deptno.
+        var mappedFiveDepts = Depts
+            .Where(dept => fiveCounts.Contains(dept.Deptno));
+
+
+        // Wybranie departamentów, których nie ma u żadnych pracowników (0).
+        var noCountsDepts = Depts
+            .Where(dept => !onlyDeptno.Contains(dept.Deptno));
+
+        return mappedFiveDepts.Concat(noCountsDepts);
     }
 }

@@ -12,3 +12,4 @@
 /Users/stanislawstepka/Desktop/DYSK M/UCZELNIA/4 SEM/APBD/CW 8/Cwiczenia8/LinqTutorials/LinqTasks/obj/Debug/net8.0/LinqTasks.pdb
 /Users/stanislawstepka/Desktop/DYSK M/UCZELNIA/4 SEM/APBD/CW 8/Cwiczenia8/LinqTutorials/LinqTasks/obj/Debug/net8.0/LinqTasks.genruntimeconfig.cache
 /Users/stanislawstepka/Desktop/DYSK M/UCZELNIA/4 SEM/APBD/CW 8/Cwiczenia8/LinqTutorials/LinqTasks/obj/Debug/net8.0/ref/LinqTasks.dll
+/Users/stanislawstepka/Desktop/DYSK M/UCZELNIA/4 SEM/APBD/CW 8/Cwiczenia8/LinqTutorials/LinqTasks/obj/Debug/net8.0/LinqTasks.sourcelink.json
